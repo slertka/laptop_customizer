@@ -1,5 +1,4 @@
 import React from "react";
-import Feature from "../Feature/Feature";
 
 class Features extends React.Component {
   static defaultProps = {
