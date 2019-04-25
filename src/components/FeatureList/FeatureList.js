@@ -18,7 +18,7 @@ class Features extends React.Component {
           <li key={index} className="feature__item">
             <div
               className={featureClass}
-              onClick={e => this.updateFeature(key, item)}
+              onClick={e => this.props.handleFeatureUpdate(key, item)}
             >
               {item.name}(
               {new Intl.NumberFormat("en-US", {
