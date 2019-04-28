@@ -1,5 +1,6 @@
 import React from "react";
 import SummaryTotal from "../SummaryTotal/SummaryTotal";
+import SummaryCost from "../SummaryCost/SummaryCost";
 
 class MainSummary extends React.Component {
   render() {
@@ -9,12 +10,7 @@ class MainSummary extends React.Component {
         <div className="summary__option__value">
           {this.props.selected[key].name}
         </div>
-        <div className="summary__option__cost">
-          {new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-          }).format(this.props.selected[key].cost)}
-        </div>
+        <SummaryCost selected={this.props.selected[key]} />
       </div>
     ));
 
